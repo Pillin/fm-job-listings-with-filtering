@@ -7,6 +7,10 @@ export const H1 = styled(motion.h1)<{}>`
   font-size: 18px;
   line-height: 24px;
   color: #2b3939;
+
+  &:hover {
+    color: #5ca5a5;
+  }
 `;
 export const H2 = styled(motion.h2)<{}>`
   font-style: normal;

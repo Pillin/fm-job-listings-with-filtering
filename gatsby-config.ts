@@ -12,6 +12,14 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     `gatsby-transformer-json`,
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/
+        }
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
