@@ -43,7 +43,7 @@ const CardList = () => {
   `);
 
   const [info, setInfo] = React.useState(data.allDataJson.nodes);
-  const [filtered, setFiltered] = React.useState(["frontend"]);
+  const [filtered, setFiltered] = React.useState([]);
 
   const addFiltered = (value: string) => {
     let newElem = [...filtered];
@@ -64,7 +64,16 @@ const CardList = () => {
     setFiltered(newArr);
   };
 
-  useEffect(() => {}, [filtered]);
+  useEffect(() => {
+    const oldList = data.allDataJson.nodes;
+
+    const newList = oldList.filter((elem: any) =>
+      filtered.every(
+        (str) => [elem.role, elem.level, ...elem.languages].indexOf(str) >= 0
+      )
+    );
+    setInfo(newList);
+  }, [filtered]);
 
   return (
     <CardContainer>

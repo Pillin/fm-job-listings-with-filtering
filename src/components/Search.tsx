@@ -69,6 +69,7 @@ const Button = styled(motion.button)`
   line-height: 24px;
   letter-spacing: -0.1px;
   color: #7c8f8f;
+  cursor: pointer;
   background-color: transparent;
   border: 0px;
 `;
@@ -78,7 +79,7 @@ const CloseButton = styled.button`
   background-color: #5ca5a5;
   display: flex;
   padding: 4px;
-
+  cursor: pointer;
   &:hover {
     background-color: black;
   }
@@ -87,7 +88,7 @@ const CloseButton = styled.button`
 const Search = (props: { list: string[]; setSelection: Function }) => {
   return (
     <Container>
-      <Row>
+      <Row gap="8px 16px">
         {props.list.map((elem, index) => (
           <TagContainer key={`tag-${index}`}>
             <Tag>

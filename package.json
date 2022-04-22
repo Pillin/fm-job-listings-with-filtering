@@ -4,7 +4,9 @@
   "private": true,
   "description": "second-gatscby",
   "author": "Pillippa Perez Pons",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",

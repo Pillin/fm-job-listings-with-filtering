@@ -25,6 +25,13 @@
             "port": 36669
           },
           "closeable": true
+        },
+        {
+          "id": "codesandbox.browser",
+          "options": {
+            "port": 43399
+          },
+          "closeable": true
         }
       ]
     },
